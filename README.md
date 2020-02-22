@@ -1,10 +1,10 @@
 # Simple-Lang
 
-A stupidly basic programming language I started making using YACC and Lex.
+A stupidly basic programming language I started making to screw around with YACC and Lex.
 
 
 While self studying compiler design, each book I referenced mentioned these two tools, 
-so I figured I should screw around with them a bit at the very least.
+so I figured I should see what they were about.
 They're cool and all, but I want to get into the guts of writing lexers and parsers by hand.
 
 

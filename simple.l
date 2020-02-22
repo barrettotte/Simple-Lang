@@ -23,7 +23,7 @@ LE      return LE;
 \*      return MULTIPLY;
 \/      return DIVIDE;
 \%      return MODULUS;
-\:\=    return ASSIGN;
+\=      return ASSIGN;
 
 \(      return L_PAREN;
 \)      return R_PAREN;

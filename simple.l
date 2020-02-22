@@ -1,7 +1,8 @@
 %option yylineno
 
 digit           [0-9]
-letter          [A-Za-z]
+letter          [A-Z]
+alphanumeric    ({letter}|{digit})
 sign            [+-]
 newline         \n
 whitespace      [ \t\n]
@@ -40,10 +41,10 @@ FOR     return FOR;
 IF      return IF;
 ELSE    return ELSE;
 
-int     return T_INT;
-real    return T_REAL;
-string  return T_STRING;
-void    return T_VOID;
+INT     return T_INT;
+REAL    return T_REAL;
+STRING  return T_STRING;
+VOID    return T_VOID;
 
 
 {sign}{digit}+              return INT;
@@ -55,7 +56,8 @@ void    return T_VOID;
          return NEW_LINE;
         }
 
-.       return ERROR;
+{whitespace}                ;
+.                           return ERROR;
 
 %%
 

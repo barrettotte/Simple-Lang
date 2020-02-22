@@ -1,0 +1,24 @@
+PGM(VOID){
+    INT DOUBLEME(INT A){
+        RETURN (A * 2);
+    }
+
+    INT DOTPRODUCT2D(INT A1, INT A2, INT B1, INT B2){
+        RETURN (A1 * B1) + (A2 * B2);
+    }
+
+    INT MAIN(VOID){
+        INT X1 = 10;
+        INT X2 = DOUBLEME(50);
+        INT X3 = DOUBLEME(MYNUM);
+
+        INT DP = 0;
+        IF ((X1 GT 0) AND (X2 LT 1000)){
+            INT DP = DOTPRODUCT2D(5,10,25,2);
+        } ELSE {
+            INT DP = DOTPRODUCT2D(25,10,5,2);
+        }
+
+        RETURN 0;
+    }
+}

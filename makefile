@@ -2,7 +2,7 @@ simple: y.tab.c
 	gcc -o simple y.tab.c
 
 y.tab.c: simple.y lex.yy.c
-	yacc -d simple.y
+	yacc simple.y
 
 lex.yy.c: simple.l
 	lex simple.l

@@ -1,8 +1,12 @@
 # Simple-Lang
 
-A very basic programming language made using YACC and Flex.
+A stupidly basic programming language I started making using YACC and Lex.
 
-While self studying compiler design, each book mentioned these two tools, so I figured I should give them a shot.
+
+While self studying compiler design, each book I referenced mentioned these two tools, 
+so I figured I should screw around with them a bit at the very least.
+They're cool and all, but I want to get into the guts of writing lexers and parsers by hand.
+
 
 
 ## References

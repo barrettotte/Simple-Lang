@@ -11,16 +11,10 @@
 
 %%
 
-func_types  : T_INT | T_REAL T_STRING T_VOID
-            ;
-
-types       : INT | REAL | STRING
+types       : T_INT | T_REAL | T_STRING | T_VOID
             ;
 
 operators   : EQ | NE | LT | LE | GT | GE
-            ;
-
-nothing     :
             ;
 
 pgm         : PGM L_PAREN args R_PAREN block
@@ -71,12 +65,12 @@ term        : term MULTIPLY factor
 factor      : L_PAREN expression R_PAREN
             ;
 
-func_dec    : func_types STRING L_PAREN func_parms R_PAREN block
+func_dec    : types STRING L_PAREN func_parms R_PAREN block
             ;
 
-func_parms  : STRING
-            | func_parms COMMA STRING
-            | nothing
+func_parms  : types STRING
+            | func_parms COMMA types STRING
+            | T_VOID
             ;
 
 return      : RETURN expression
@@ -87,7 +81,7 @@ func_call   : STRING L_PAREN args R_PAREN
 
 args        : expression
             | args COMMA expression
-            | nothing
+            | T_VOID
             ;
 
 var_dec     : types STRING ASSIGN expression

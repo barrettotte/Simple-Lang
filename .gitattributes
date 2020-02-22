@@ -1,0 +1,2 @@
+*.l linguist-language=Lex
+*.y linguist-language=Yacc
